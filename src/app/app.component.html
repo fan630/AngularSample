@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,5 +16,34 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">順序</th>
+      <th scope="col">員工編號</th>
+      <th scope="col">姓名</th>
+      <th scope="col">地址</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeelists; index as i">
+      <td>{{i+1}}</td>
+      <td>{{employee.serialnumber}}</td>
+      <td>{{employee.name}}</td>
+      <td>
+        <p *ngIf="employee.address.trim() !== ''">
+          {{employee.address}}
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<button (click)="doclickevent()">
+  觸發按鈕
+</button>
 

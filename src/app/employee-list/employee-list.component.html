@@ -1,0 +1,10 @@
+<h2>員工列表</h2>
+
+<ul class="employees">
+  <li *ngFor="let employeeInfo of employeelists">
+    <span class="badge">
+      {{employeeInfo.id}}
+    </span>
+    {{employeeInfo.name}}
+  </li>
+</ul>
